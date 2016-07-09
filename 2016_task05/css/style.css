@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+p {
+    line-height: 1.8em;
+    text-indent: 2em;
+}
+
+img {
+    width: 100px;
+    height: 80px;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.header {
+    min-width: 800px;
+    height: 60px;
+    background-color: #333;
+}
+
+.logo {
+    float: left;
+
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 40px;
+
+    font-size: 1.5em;
+    color: #c81000;
+}
+
+.navbar {
+    float: right;
+    padding-right: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: #666;
+    -webkit-transition: all 0.2s linear;
+}
+
+.navbar li {
+    float: left;
+
+    margin-left: 20px;
+    width: 80px;
+}
+/*主体内容*/
+.container {
+    padding: 20px 410px 20px 20px;
+    min-width: 390px;
+    background-color: #dedede;
+}
+/*左侧部分*/
+.left-wrap {
+    float: left;
+    width: 100%;
+}
+.passage-sec {
+    margin-bottom: 20px;
+    border: 1px solid #cbcbcb;
+    padding: 20px;
+
+    background-color: #fff;
+    box-shadow: 2px 2px #848484;
+}
+
+.passage-subtitle {
+    color: #666;
+}
+.passage-info {
+    font-size: .8em;
+    color: #666;
+}
+
+.list-one {
+    list-style: none;
+}
+
+.image-box {
+    display: inline-block;
+
+    margin: 10px;
+    border: 1px solid #cbcbcb;
+    padding: 10px;
+}
+.image-name {
+    margin-bottom: 10px;
+
+    font-size: .8em;
+    text-align: center;
+}
+
+.ranking li {
+    font-family: "黑体";
+    line-height: 1.5em;
+}
+
+.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    text-indent: .5em;
+}
+.my-table th {
+    line-height: 1.5em;
+
+    color: #fff;
+    background-color: #333;
+}
+.my-table-sum {
+    background-color: #ccc;
+}
+/*右侧部分*/
+.right-wrap {
+    float: left;
+
+    position: relative;
+    right: -390px;
+
+    margin-left: -372px;
+    border: 1px solid #cbcbcb;
+    padding: 20px;
+    width: 330px;
+
+    background-color: #fff;
+    box-shadow: 2px 2px #848484;
+}
+
+.right-title {
+    margin: 0 0 10px;
+    border-left: 3px solid #ccc;
+    height: 40px;
+
+    line-height: 40px;
+    text-align: center;
+}
+
+.form-box {
+    margin: 20px 0;
+}
+
+.input-tip {
+    display: inline-block;
+
+    margin-right: 10px;
+    width: 125px;
+
+    text-align: right;
+    vertical-align: top;
+}
+
+.mail-tip,
+.password-tip {
+    margin: 10px 0  10px 130px;
+    font-size: .8em;
+    color: #ccc;
+}
+
+.submit-btn {
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+
+    color: #fff;
+    background-color: #3355d0;
+}
+/*页尾部分*/
+.footer {
+    min-width: 800px;
+    height: 70px;
+
+    line-height: 70px;
+    text-align: center;
+
+    color: #fff;
+    background-color: #000;
+}

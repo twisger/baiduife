@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task15</title>
+</head>
+<body>
+    <ul id="source">
+        <li>北京空气质量：<b>60</b></li>
+        <li>上海空气质量：<b>70</b></li>
+        <li>天津空气质量：<b>80</b></li>
+        <li>广州空气质量：<b>50</b></li>
+        <li>深圳空气质量：<b>40</b></li>
+        <li>福州空气质量：<b>32</b></li>
+        <li>成都空气质量：<b>90</b></li>
+    </ul>
+    <ul id="resort">
+        
+    </ul>
+    <button id="sortBtn">排序</button>
+    <script>
+        /**
+         * getData方法
+         * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+         * 返回一个数组，格式见函数中示例
+         */
+        function getData() {
+            //取得ul子元素节点并转化为数组
+            var liNodes = Array.prototype.slice.call(document.getElementById('source').children, 0); 
+            var data = [];
+            liNodes.forEach(function(liNode) {
+                var cityStr = liNode.innerHTML.split('空气质量')[0];
+                var num = parseInt(liNode.childNodes[1].innerHTML, 10);
+                data.push([cityStr, num]);
+            });
+            return data;
+        }
+        /**
+         * sortAqiData
+         * 按空气质量对data进行从小到大的排序
+         * 返回一个排序后的数组
+         */
+        function sortAqiData(data) {
+            data = data.sort(function(item1, item2) {
+                return item1[1] - item2[1];
+            });
+            return data;
+        }
+        /**
+         * render
+         * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+         * 格式见ul中的注释的部分
+         */
+        function render(data) {
+            var cNumbers = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+            var liStr = '';
+            data.forEach(function(item, i) {
+                liStr = liStr + '<li>第' + cNumbers[i] + '名：' + item[0] + ',空气质量 ：' + '<b>' + item[1] + '</b></li>';
+            });
+            document.getElementById('resort').innerHTML = liStr;
+        }
+
+        function btnHandle() {
+          var aqiData = getData();
+          aqiData = sortAqiData(aqiData);
+          render(aqiData);
+          document.getElementById('sortBtn').disabled = true;
+        }
+
+
+        function init() {
+          // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+            document.getElementById('sortBtn').onclick = btnHandle;
+        }
+        init();
+    </script>
+</body>
+</html>

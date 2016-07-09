@@ -1,0 +1,53 @@
+html, 
+body {
+    margin: 0;
+    padding-left: 0;
+}
+
+.flex-container {
+    display: flex;
+
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    -o-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #888;
+    padding: 20px;
+    background-color: #aaa;
+}
+.flex-item {
+    
+    width: 150px;
+    border: 1px solid red;
+}
+.box1 {
+    height: 120px;
+}
+.box2 {
+    height: 100px;
+}
+.box3 {
+    height: 40px;
+}
+.box4 {
+    height: 200px;
+    border: 1px solid blue;
+}
+
+@media (max-width: 640px) {
+    .flex-container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .flex-item {
+        margin-bottom: 20px;
+    }
+    .box4 {
+        order: -1;
+    }
+}

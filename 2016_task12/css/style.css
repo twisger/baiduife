@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    padding: 20px;
+}
+th {
+    color: #fff;
+    background-color: #000;
+}
+tr:nth-of-type(even) {
+    background-color: #eee;
+}
+tr:nth-of-type(1),
+tr:nth-of-type(2),
+tr:nth-of-type(3) {
+    color: red;
+}
+
+input[type="text"] {
+    margin: 20px 0;
+    width: 100px;
+    -webkit-transition: width  .5s;
+    -o-transition: width  .5s;
+    transition: width  .5s;
+}
+input[type="text"]:focus {
+    width: 250px;
+}
+
+.banner-wrap {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+}
+.banner-wrap input {
+    display: none;
+}
+.banner-navbar {
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    bottom: 0;
+}
+.banner-btn {
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+/*按钮间隙会导致切换图片不平滑，故改为圆形*/
+.banner-btn div {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.banner-btn:hover {
+    cursor: pointer;
+}
+@-webkit-keyframes banner-switch {
+    0% {right: 0;}
+    30% {right: 0;}
+    35% {right: 300px;}
+    65% {right: 300px;}
+    70% {right: 600px;}
+    100% {right: 600px;}
+}
+.banner-list {
+    -webkit-animation: banner-switch 10s infinite alternate;
+    position: relative;
+    z-index: 8;
+    width: 900px;
+    transition: right 1s;
+}
+.banner {
+    float: left;
+    width: 300px;
+    height: 150px;
+}
+.item1 {
+    background-color: #f00;
+}
+.item2 {
+    background-color: #0f0;
+}
+.item3 {
+    background-color: #00f;
+}
+
+#item1:hover ~ .banner-list {
+    -webkit-animation-name: none;
+    right: 0;
+}
+#item2:hover ~ .banner-list {
+    -webkit-animation-name: none;
+    right: 300px;
+}
+#item3:hover ~ .banner-list {
+    -webkit-animation-name: none;
+    right: 600px;
+}

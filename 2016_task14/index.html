@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task14</title>
+</head>
+<body>
+    <h3>污染城市列表</h3>
+    <ul id="aqiList">
+    </ul>
+    <script type="text/javascript">
+    var aqiDate = [
+        ['北京', 90],
+        ['上海', 50],
+        ['福州', 10],
+        ['广州', 50],
+        ['成都', 90],
+        ['西安', 100]
+    ];
+
+    (function() {
+        aqiDate = aqiDate.sort(function(array1, array2) {
+            return array1[1] - array2[1];
+        });
+        var aqiStr = '';
+        var numToTextArray = ['一','二','三','四','五','六'];
+        for (var i = aqiDate.length - 1; i >= 0; i--) {
+            if (aqiDate[i][1] > 60) {
+                aqiStr += '<li>第' + numToTextArray[aqiDate.length - (i + 1)] + '名：' + aqiDate[i] + '</li>';
+            } 
+        }
+        document.getElementById('aqiList').innerHTML = aqiStr;
+    })();
+    </script>
+</body>
+</html>
