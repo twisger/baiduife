@@ -2,9 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>task16</title>
+    <script src="js/task.js"></script>
 </head>
 <body>
-    
+    <div>
+        <label>城市名称：<input id="aqiCityInput" type="text" pattern="[\u4e00-\u9fa5]"></label><span style="color:red; " id="aqiCityTip"></span><br>
+        <label>空气质量指数：<input id="aqiValueInput" type="text"></label><span style="color:red; " id="aqiValueTip"></span><br>
+        <button id="addBtn" >确认添加</button>
+    </div>
+    <table id="aqiTable">
+    </table>
 </body>
 </html>

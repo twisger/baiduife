@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task18</title>
+    <script src="js/task.js"></script>
+    <style>
+        .queue-show span {
+            background-color: red;
+            margin: 10px;
+        }
+        .queue-show span:hover {
+            cursor: pointer;
+        }
+        button:nth-child(4) {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="queueControll">
+        <label>请输入数字：<input type="text"></label>
+        <button>左侧入</button>
+        <button>右侧入</button>
+        <button>左侧出</button>
+        <button>右侧出</button>
+    </div>
+    <div class="queue-show" id="queueShow">
+    </div>
+</body>
+</html>

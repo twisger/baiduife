@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task18</title>
+    <script src="js/task.js"></script>
+    <style>
+        .queue-show {
+            display: flex;
+            height: 500px;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .queue-show div {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            color: #fff;
+            background-color: red;
+        }
+        .queue-show div:hover {
+            cursor: pointer;
+        }
+        button:nth-child(4) {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="queueControll">
+        <label>请输入一个十位数：<input type="text"></label>
+        <button>左侧入</button>
+        <button>右侧入</button>
+        <button>左侧出</button>
+        <button>右侧出</button>
+        <button>随机30个</button>
+        <button>激活动画</button>
+        <button>排序</button>
+    </div>
+    <div class="queue-show" id="queueShow">
+    </div>
+</body>
+</html>
