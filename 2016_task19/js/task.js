@@ -108,9 +108,6 @@ window.onload = function() {
         });
     }
     queueControll.children[6].onclick = function() {
-        var nodeA = document.getElementById('queueShow').children[0];
-        var nodeB = document.getElementById('queueShow').children[10];
-        swapPosition(nodeA, nodeB);
     };
     function swap(a, b) {
         queue[a] = queue[a] ^ queue[b];
@@ -130,12 +127,10 @@ window.onload = function() {
                     j--;
                 }
                 swap(i, j);
-                swapPosition(queueShow.children[i], queueShow.children[j]);
                 while(i < j && queue[i] <= key) {
                     i++;
                 }
                 swap(i, j);
-                swapPosition(queueShow.children[i], queueShow.children[j]);
             }
             if (i - pointer[0] > 1) {
                 stack.push([pointer[0], i -1]);
