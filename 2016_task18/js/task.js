@@ -1,12 +1,12 @@
 
 window.onload = function() {
-    var queue = [];
-    var queueControll = document.getElementById('queueControll');
-    var numInput = queueControll.children[0].children[0];
-    var leftIn = queueControll.children[1];
-    var rightIn = queueControll.children[2];
-    var leftOut = queueControll.children[3];
-    var rightOut = queueControll.children[4];
+    var queue = [],
+        queueControll = document.getElementById('queueControll'),
+        numInput = queueControll.children[0].children[0],
+        leftIn = queueControll.children[1],
+        rightIn = queueControll.children[2],
+        leftOut = queueControll.children[3],
+        rightOut = queueControll.children[4];
     //输入验证
     numInput.addEventListener('focusout', function() {
         if (!numInput.value.match(/^\d+$/)) {

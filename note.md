@@ -29,3 +29,7 @@ focusout事件只能使用dom3级绑定，即addEventListener,js里使用onfocus
 非要用dom1级可以用blur代替，但它不冒泡。
 想不出什么方法可以判断元素是第几个子元素，最终选择设置dataset加一个index属性解决，review代码过程中发现这个方法
 [].indexOf.call(event.target.parentNode.children, event.target)，学习了。
+# task19
+尝试做出动画效果，但遇到一个问题js里定时器是异步的，也就是说程序不会等待settimeout执行完毕再执行下一行，所以会出现动画还没播放完排序已经结束的情况。另外，要使节点动画生效，需要用到闭包。因为setTImeout无法传递参数，所以需要在函数内部应用闭包来保存第一次调用函数时传入的参数，再使用定时器调用这个函数。
+# 编码规范讨论
+匿名函数的命名。
