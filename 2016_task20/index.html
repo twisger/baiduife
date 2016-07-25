@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>task18</title>
+    <script src="js/task.js"></script>
+    <style>
+        .queue-show div {
+            display: inline-block;
+            background-color: #999;
+            color: #fff;
+            margin: 10px;
+        }
+        .queue-show div.match-content {
+            background-color: red;
+        }
+        .queue-show div:hover {
+            cursor: pointer;
+        }
+        button:nth-child(4) {
+            margin-left: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="queueControll">
+        <label>请输入数字：<textarea></textarea></label>
+        <button>左侧入</button>
+        <button>右侧入</button>
+        <button>左侧出</button>
+        <button>右侧出</button>
+        <label>请输入查询内容：<input type="text"></label>
+        <button>查询</button>
+    </div>
+    <div class="queue-show" id="queueShow">
+    </div>
+</body>
+</html>

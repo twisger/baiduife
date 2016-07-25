@@ -28,14 +28,14 @@ window.onload = function() {
         renderQueue();
     };
     rightIn.onclick = function() {
-        if (!queue.length) {
-            alert('队列为空');
-            return;
-        }
         queue.push(numInput.value);
         renderQueue();
     };
     rightOut.onclick = function() {
+        if (!queue.length) {
+            alert('队列为空');
+            return;
+        }
         alert(queue.pop());
         renderQueue();
     };
